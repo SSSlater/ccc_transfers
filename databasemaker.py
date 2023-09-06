@@ -26,7 +26,7 @@ class DatabaseMaker():
             if self.major_code not in file_name or 'report' not in file_name:
                 continue
             info = file_name.replace('.pdf', '').split('_') #splits the name of the file (containing the school id) 
-            #each file will contain the school ids of the "from" and the "to" schools
+            #each file name will contain the school ids of the "from" and the "to" schools
             to_school_id = info[1] #
             from_school_id = int(info[2]) 
             extractor = PDF_Extractor(f'agreements/{file_name}')
